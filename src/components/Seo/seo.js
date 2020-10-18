@@ -19,11 +19,28 @@ import { useStaticQuery, graphql } from "gatsby"
 //   }
 // `
 
+
+seo.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  article: PropTypes.bool,
+}
+
+seo.defaultProps = {
+  title: null,
+  description: null,
+  image: null,
+  lang: `ja`,
+  article: false,
+}
+
+
 const SEO = ({ title, description, lang, image, article }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(
     graphql`
-      query SEO {
+      query seo {
         site {
           siteMetadata {
             defaultTitle: title
@@ -83,18 +100,3 @@ const SEO = ({ title, description, lang, image, article }) => {
 }
 
 export default SEO
-
-SEO.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
-  article: PropTypes.bool,
-}
-
-SEO.defaultProps = {
-  title: null,
-  description: null,
-  image: null,
-  lang: `ja`,
-  article: false,
-}
