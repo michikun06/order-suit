@@ -3,23 +3,23 @@ import styled from "styled-components"
 
 const PriceContent = ({ title, description, image }) => {
 
-    return (
-        <PriceContentWrapper >
-            <div className="content-container">
-                <h2 className="title">{title}</h2>
+  return (
+    <PriceContentWrapper >
+      <div className="content-container">
+        <h2 className="title">{title}</h2>
 
-                <div className="media">
+        <div className="media">
 
-                    <img className="media_image" src={image} width="40%" alt="予約の画像" />
+          <img className="media_image" src={image} width="40%" alt="予約の画像" />
 
-                    <div className="media_summary">
-                        <p className="madia_text">{description}</p>
-                    </div>
-                </div>
+          <div className="media_summary">
+            <p className="madia_text">{description}</p>
+          </div>
+        </div>
 
-            </div>
-        </PriceContentWrapper>
-    )
+      </div>
+    </PriceContentWrapper>
+  )
 }
 
 const PriceContentWrapper = styled.section`

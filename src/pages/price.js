@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 // import Button from "../components/Button/button"
 import PriceTop from "../components/Price/priceTop"
-import PriceContent from "../components/Price/PriceContent"
+import PriceContent from "../components/Price/priceContent"
 
 
 
