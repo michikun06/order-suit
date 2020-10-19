@@ -25,9 +25,9 @@ const TextBlockImg = ({ title, children, subtitle, id }) => {
       marginTop: "3rem"
     },
     subTitle: {
-      fontSize: "80%",
+      fontSize: "100%",
       lineHeight: "1.4em",
-      opacity: "0.7",
+      opacity: "0.90",
       marginBottom: "3rem"
     },
     reserveButton: {

@@ -30,9 +30,9 @@ const Banner = () => {
       opacity: "1"
     },
     subTitle: {
-      fontSize: "60%",
+      fontSize: "85%",
       lineHeight: "1.8em",
-      opacity: "0.6"
+      opacity: "0.8"
     },
     reserveButton: {
       opacity: "0.6"

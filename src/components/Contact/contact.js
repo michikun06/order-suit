@@ -9,9 +9,9 @@ const Contact = ({ title, subtitle, id }) => {
       fontWeight: "bolder"
     },
     subTitle: {
-      fontSize: "80%",
+      fontSize: "95%",
       lineHeight: "1.4em",
-      opacity: "0.7",
+      opacity: "0.85",
       marginBottom: "2rem"
     }
   }

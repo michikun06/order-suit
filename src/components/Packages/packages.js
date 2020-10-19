@@ -26,11 +26,11 @@ const Packages = ({ title, para, children }) => {
       letterSpacing: "0.2em",
     },
     subTitle: {
-      fontSize: "70%",
+      fontSize: "100%",
       lineHeight: "1.4em",
       fontWeight: "lighter",
       letterSpacing: "0.2em",
-      opacity: "0.7",
+      opacity: "0.9",
       marginTop: "2rem"
     }
   }
