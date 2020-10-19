@@ -4,56 +4,9 @@ import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 
-// const query = graphql`
-//   query SEO {
-//     site {
-//       siteMetadata {
-//         defaultTitle: title
-//         titleTemplate
-//         defaultDescription: description
-//         siteUrl: siteUrl
-//         defaultImage: image
-//         instagramUsername
-//       }
-//     }
-//   }
-// `
-
-
-seo.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
-  article: PropTypes.bool,
-}
-
-seo.defaultProps = {
-  title: null,
-  description: null,
-  image: null,
-  lang: `ja`,
-  article: false,
-}
-
-
 const SEO = ({ title, description, lang, image, article }) => {
   const { pathname } = useLocation()
-  const { site } = useStaticQuery(
-    graphql`
-      query seo {
-        site {
-          siteMetadata {
-            defaultTitle: title
-            titleTemplate
-            defaultDescription: description
-            siteUrl: siteUrl
-            defaultImage: image
-            instagramUsername
-          }
-        }
-      }
-    `
-  )
+  const { site } = useStaticQuery(query)
 
   const {
     defaultTitle,
@@ -100,3 +53,33 @@ const SEO = ({ title, description, lang, image, article }) => {
 }
 
 export default SEO
+
+SEO.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  article: PropTypes.bool,
+}
+
+SEO.defaultProps = {
+  title: null,
+  description: null,
+  image: null,
+  lang: `ja`,
+  article: false,
+}
+
+const query = graphql`
+  query SEO {
+    site {
+      siteMetadata {
+        defaultTitle: title
+        titleTemplate
+        defaultDescription: description
+        siteUrl: siteUrl
+        defaultImage: image
+        instagramUsername
+      }
+    }
+  }
+`
