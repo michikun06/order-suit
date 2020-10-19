@@ -1,12 +1,27 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import { useLocation } from "@reach/router"
+// import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 
 const SEO = ({ title, description, lang, image, article }) => {
-  const { pathname } = useLocation()
-  const { site } = useStaticQuery(query)
+  // const { pathname } = useLocation()
+  const { site } = useStaticQuery(
+    graphql`
+      query SEO {
+        site {
+          siteMetadata {
+            defaultTitle: title
+            titleTemplate
+            defaultDescription: description
+            siteUrl: siteUrl
+            defaultImage: image
+            instagramUsername
+          }
+        }
+      }    
+    `
+  )
 
   const {
     defaultTitle,
@@ -21,8 +36,10 @@ const SEO = ({ title, description, lang, image, article }) => {
     title: title || defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
-    url: `${siteUrl}${pathname}`,
+    url: `${siteUrl}`,
   }
+
+  // ${ pathname }
 
   return (
     <Helmet
@@ -69,17 +86,17 @@ SEO.defaultProps = {
   article: false,
 }
 
-const query = graphql`
-  query SEO {
-    site {
-      siteMetadata {
-        defaultTitle: title
-        titleTemplate
-        defaultDescription: description
-        siteUrl: siteUrl
-        defaultImage: image
-        instagramUsername
-      }
-    }
-  }
-`
+// const query = graphql`
+//   query SEO {
+//     site {
+//       siteMetadata {
+//         defaultTitle: title
+//         titleTemplate
+//         defaultDescription: description
+//         siteUrl: siteUrl
+//         defaultImage: image
+//         instagramUsername
+//       }
+//     }
+//   }
+// `
