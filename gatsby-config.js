@@ -10,17 +10,17 @@ module.exports = {
   siteMetadata: {
     title: "鹿児島オーダースーツ",
     titleTemplate: "%s | #IL:MALE",
-    description: "鹿児島県鹿児島市の安いオーダースーツ専門店",
+    description: "鹿児島県鹿児島市の安いオーダースーツ専門店#IL:MALE",
     author: "Michihiro Kawaji",
     image: "/yellow-metal-design-decoration.jpg",
-    siteUrl: "https://www.morganbaker.dev",
+    siteUrl: "https://il-male.netlify.app/",
     instagramUsername: "@il_mare1021",
   },
   plugins: [
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://www.morganbaker.dev`,
+        siteUrl: `https://il-male.netlify.app/`,
         stripQueryString: true,
       },
     },

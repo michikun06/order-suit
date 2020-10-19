@@ -85,18 +85,3 @@ SEO.defaultProps = {
   lang: `ja`,
   article: false,
 }
-
-// const query = graphql`
-//   query SEO {
-//     site {
-//       siteMetadata {
-//         defaultTitle: title
-//         titleTemplate
-//         defaultDescription: description
-//         siteUrl: siteUrl
-//         defaultImage: image
-//         instagramUsername
-//       }
-//     }
-//   }
-// `
