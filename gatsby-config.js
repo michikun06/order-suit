@@ -10,13 +10,20 @@ module.exports = {
   siteMetadata: {
     title: "鹿児島オーダースーツ",
     titleTemplate: "%s | #IL:MALE",
-    description: "鹿児島県鹿児島市の安いオーダースーツ専門店#IL:MALE",
+    description: "鹿児島県鹿児島市の出張訪問をメインにした安いオーダースーツ専門店#IL:MALE",
     author: "Michihiro Kawaji",
     image: "/yellow-metal-design-decoration.jpg",
     siteUrl: "https://il-male.netlify.app/",
     instagramUsername: "@il_mare1021",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "process.env.GOOGLE_ANALYTICS_TRACKING_ID",
+        head: true,
+      }
+    },
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
@@ -30,6 +37,14 @@ module.exports = {
         name: `images`,
         path: path.join(__dirname, `src`, `images`),
       },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://il-male.netlify.app/',
+        sitemap: 'https://il-male.netlify.app/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
