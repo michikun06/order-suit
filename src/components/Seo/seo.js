@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
+import OPG from "../../images/OPG.jpeg"
 
 const SEO = ({ title, description, lang, image, article }) => {
   const { pathname } = useLocation()
@@ -39,7 +40,7 @@ const SEO = ({ title, description, lang, image, article }) => {
     url: `${siteUrl}${pathname}`,
   }
 
-  // 
+  const imageSrc = OPG
 
   return (
     <Helmet
@@ -48,23 +49,23 @@ const SEO = ({ title, description, lang, image, article }) => {
       titleTemplate={titleTemplate}
     >
       <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
+      <meta name="image" content={imageSrc} />
       {seo.url && <meta property="og:url" content={seo.url} />}
       {(article ? true : null) && <meta property="og:type" content="article" />}
       {seo.title && <meta property="og:title" content={seo.title} />}
       {seo.description && (
         <meta property="og:description" content={seo.description} />
       )}
-      {seo.image && <meta property="og:image" content={seo.image} />}
-      <meta name="twitter:card" content="summary_large_image" />
+      {seo.image && <meta property="og:image" content={imageSrc} />}
+      <meta name="instagram:card" content="summary_large_image" />
       {instagramUsername && (
-        <meta name="twitter:creator" content={instagramUsername} />
+        <meta name="instagram:creator" content={instagramUsername} />
       )}
-      {seo.title && <meta name="twitter:title" content={seo.title} />}
+      {seo.title && <meta name="instagram:title" content={seo.title} />}
       {seo.description && (
-        <meta name="twitter:description" content={seo.description} />
+        <meta name="instagram:description" content={seo.description} />
       )}
-      {seo.image && <meta name="twitter:image" content={seo.image} />}
+      {seo.image && <meta name="instagram:image" content={seo.image} />}
     </Helmet>
   )
 }
