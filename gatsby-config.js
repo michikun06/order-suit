@@ -12,7 +12,7 @@ module.exports = {
     titleTemplate: "%s | #IL:MALE",
     description: "鹿児島県鹿児島市の出張訪問をメインにした安いオーダースーツ専門店#IL:MALE",
     author: "Michihiro Kawaji",
-    image: "/yellow-metal-design-decoration.jpg",
+    image: "/About背景.png",
     siteUrl: "https://il-male.netlify.app/",
     instagramUsername: "@il_mare1021",
   },
