@@ -1,6 +1,6 @@
 var plugins = [{
       plugin: require('/Users/ipad/react/order-suit/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
-      options: {"plugins":[],"trackingId":"process.env.GOOGLE_ANALYTICS_TRACKING_ID","head":true},
+      options: {"plugins":[],"head":true},
     },{
       plugin: require('/Users/ipad/react/order-suit/node_modules/gatsby-plugin-canonical-urls/gatsby-ssr'),
       options: {"plugins":[],"siteUrl":"https://il-male.netlify.app/","stripQueryString":true},
