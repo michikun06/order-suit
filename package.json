@@ -3,7 +3,7 @@
   "private": false,
   "description": "鹿児島県鹿児島市のオーダースーツ専門店IL:MALEのウェブサイト",
   "version": "0.1.0",
-  "license": "null",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
