@@ -75,7 +75,7 @@ const Contact = ({ title, subtitle, id }) => {
 }
 
 const ContactWrapper = styled.section`
-  padding: 100px 30px;
+  padding: 100px 30px 50px;
 
   .content-container {
     width: 100%;
@@ -91,6 +91,7 @@ const ContactWrapper = styled.section`
     form {
       position: relative;
       overflow: hidden;
+      padding-bottom: 50px;
 
       .input-area {
         margin-bottom: 40px;
