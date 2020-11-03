@@ -9,7 +9,7 @@ const SEO = ({ title, description, lang, image, article }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(
     graphql`
-      query SEO {
+      {
         site {
           siteMetadata {
             defaultTitle: title
