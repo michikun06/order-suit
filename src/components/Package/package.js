@@ -67,7 +67,7 @@ const PackageWrapper = styled.article`
 
     @media (min-width: 992px) {
     height: 500px;
-  }
+    }
   }
 
   &.not-active {

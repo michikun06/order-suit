@@ -4,9 +4,7 @@ import Layout from "../components/layout"
 import PriceTop from "../components/Price/priceTop"
 import PriceContent from "../components/Price/priceContent"
 
-
-
-import Image from "../images/About背景.png"
+// Lineupページの商品画像
 import Image1 from "../images/lineup1.jpg"
 
 
@@ -33,11 +31,11 @@ export default () => {
                 <div style={Styles.contents}>
                     <PriceContent
                         title="オーダースーツ"
-                        description="ジャケット、パンツ、シャツのセットで￥39,800〜"
+                        // description="ジャケット、パンツ、シャツのセットで￥39,800〜"
                         image={Image1}
                     />
 
-                    <PriceContent
+                    {/* <PriceContent
                         title="オーダーシャツ"
                         description="税込み￥8,900〜"
                         image={Image}
@@ -53,7 +51,7 @@ export default () => {
                         title="その他小物"
                         description="当ブランドのバッグ、Tシャツ等を販売しております。"
                         image={Image}
-                    />
+                    /> */}
                 </div>
 
 

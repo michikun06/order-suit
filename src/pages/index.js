@@ -4,8 +4,10 @@ import Banner from "../components/Banner/banner"
 import TextBlock from "../components/TextBlock/textBlock"
 import TextBlockImg from "../components/TextBlockImg/textBlockImg"
 import Button from "../components/Button/button"
+import Button2 from "../components/Button/button2"
 import Packages from "../components/Packages/packages"
 import Package from "../components/Package/package"
+import BlogBlock from "../components/Blog/Blog"
 import Contact from "../components/Contact/contact"
 
 // 異なるURLのページに遷移する際に用いる
@@ -86,6 +88,21 @@ export default () => {
 
           </IconContext.Provider>
         </Packages>
+
+
+        {/* 五段目Blog */}
+        <BlogBlock
+          id="perks"
+          title="BLOG"
+          subtitle="IL:MALEの最新記事を投稿しています"
+        >
+          <PageLink
+            to="/blog/"
+            duration={500}
+          >
+            <Button2 label="More" cta="More" />
+          </PageLink>
+        </BlogBlock>
 
 
         {/* contact-form */}

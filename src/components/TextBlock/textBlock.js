@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer"
 import { motion, useAnimation } from "framer-motion"
 
 const TextBlock = ({ title, paragraph, paragraph2, id }) => {
+
   const controls = useAnimation()
   const [ref, inView] = useInView({
     // Percentage of item in view to trigger animation

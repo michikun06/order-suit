@@ -95,6 +95,18 @@ const Navbar = () => {
         </li>
 
 
+        {/* blogへ */}
+        <li>
+          <PageLink
+            to="/blog"
+            duration={500}
+            offset={-50}
+          >
+            Blog
+          </PageLink>
+        </li>
+
+
         {/* contactへ */}
         <li>
           <Link
