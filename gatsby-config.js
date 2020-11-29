@@ -25,6 +25,18 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-source-microcms",
+      options: {
+        apiKey: process.env.GATSBY_MICRO_CMS_API_KEY,
+        serviceId: "ilmale",
+        apis: [
+          {
+            endpoint: "articles",
+          },
+        ],
+      }
+    },
+    {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
         siteUrl: `https://il-male.netlify.app/`,
@@ -44,18 +56,6 @@ module.exports = {
         host: 'https://il-male.netlify.app/',
         sitemap: 'https://il-male.netlify.app/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
-      }
-    },
-    {
-      resolve: "gatsby-source-microcms",
-      options: {
-        apiKey: `process.env.GATSBY_MICRO_CMS_API_KEY`,
-        serviceId: "ilmale",
-        apis: [
-          {
-            endpoint: "articles",
-          },
-        ],
       }
     },
     `gatsby-plugin-styled-components`,
