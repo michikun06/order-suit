@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://il-male.netlify.app/sitemap.xml
-Host: https://il-male.netlify.app

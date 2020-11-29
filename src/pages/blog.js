@@ -1,81 +1,176 @@
 import React from "react"
+import { graphql } from "gatsby"
+
 import styled from "styled-components"
+
 import Layout from "../components/layout"
 import OrderTop from "../components/Order/orderTop"
-import BlogBanner from "../components/Blog/blogBanner"
 
-// ブログ一覧用画像import
-import image1 from "../images/blog/image1.jpeg"
+import { Link as PageLink } from "gatsby"
 
 
 // ブログ記事一覧ページ
-export default () => {
+export default ({ data }) => (
+    <Layout>
 
-    return (
-        <Layout>
+        {/* トップバナー */}
+        <OrderTop
+            id="Top"
+            title="Blog"
+            paragraph="IL:MALEブログ一覧"
+        />
 
-            {/* トップバナー */}
-            <OrderTop
-                id="Top"
-                title="Blog"
-                paragraph="IL:MALEブログ一覧"
-            />
-            <BlogWrapper>
-                <div className="box">
-                    <BlogBanner
-                        img={image1}
-                        title="IL:MALEについて"
-                        date="2020.10.31"
-                        to="/"
-                    />
+        <BlogWrapper>
+            <div className="box">
 
-                    {/* <BlogBanner
-                        img={image1}
-                        title="IL:MALEについて"
-                        date="2020.10.31"
-                        to="ここにリンクをいれる"
-                    />
+                {data.allMicrocmsArticles.edges.map(edge => {
+                    const articles = edge.node
+                    const category = edge.node.category[0].name
 
-                    <BlogBanner
-                        img={image1}
-                        title="IL:MALEについて"
-                        date="2020.10.31"
-                        to="ここにリンクをいれる"
-                    />
+                    if (category === 'patients') {
+                        return (
+                            <React.Fragment key={articles.id}>
+                                <PageLink to={`/articles/${articles.id}`}>
+                                    <div className="content">
+                                        <img
+                                            src={articles.pict.url}
+                                            className="img"
+                                            alt="pict画像"
+                                        />
+                                        <h2 className="title">{articles.title}</h2>
+                                        <p className="date">{articles.date}</p>
+                                    </div>
+                                </PageLink>
 
-                    <BlogBanner
-                        img={image1}
-                        title="IL:MALEについて"
-                        date="2020.10.31"
-                        to="ここにリンクをいれる"
-                    /> */}
 
-                </div>
-            </BlogWrapper>
-        </Layout>
-    )
-}
+                                {/* <div>
+                                    {articles.category.map(category => (
+                                        <React.Fragment key={category.id}>
+                                            <span>カテゴリー：{category.name}</span>
+                                        </React.Fragment>
+                                    ))}
+                                </div> */}
+                            </React.Fragment>
+                        )
+                    } else {
+                        return null
+                    }
+                })}
+
+
+
+            </div>
+        </BlogWrapper>
+    </Layout>
+)
+
+export const query = graphql`
+    {
+        allMicrocmsArticles(
+        sort: { fields: [createdAt], order: DESC }
+        ) {
+            edges {
+                node {
+                    id
+                    title
+                    date(formatString: "YYYY年MM月D日")
+                    title_origin
+                    category {
+                        id
+                        name
+                    }
+                    pict {
+                        url
+                    }
+                    body
+                }
+            }
+        }
+    }      
+`
 
 
 const BlogWrapper = styled.section`
     background: #fff;
-
     color: black;
-    padding: 30px 20px;
+    padding: 30px 0;
     height: 400px;
+    z-index: 1;
+    display: inline-block;
+    width:100%;
+    vertical-align: top;
+    text-align : center;
+
+    .content {
+        background: #0000;
+        padding: 0.8rem ;
+        width: 40%;
+        margin: 0 auto;
+        display: inline-block;
+    }
+
+    .title{
+        width:90%;
+        font-size: 13px;
+        font-weight: bold;
+        margin : 10px;
+        color: black;
+    }
+
+    .date{
+        width:100%;
+        color: #666666;
+        font-size:12px;
+    }
+
+    .img{
+        width:100%;
+    }
+
+    .content :hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
 
     @media (min-width: 600px) {
+        padding: 50px 50px;
         height: 600px;
+        text-align : left;
+
+        .content {
+            background: #0000;
+            padding: 1.2rem ;
+            width: 25%;
+        }
+
+        .title{
+            text-align: center;
+            width: 90%;
+            font-size: 13px;
+        }
+    
+        .date{
+            text-align : center;
+            width:100%;
+            color: #666666;
+            font-size:12px;
+        }
     }
 
     @media (min-width: 992px) {
-        padding: 50px 150px;
+        padding: 50px 100px;
         height: 500px;
         
         .box{
-            width:800px;
             margin: 0 auto;
+        }
+
+        .title{
+            font-size: 15px;
+        }
+
+        .date{
+            font-size:14px;
         }
     }
 `
-

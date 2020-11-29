@@ -46,6 +46,18 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
+    {
+      resolve: "gatsby-source-microcms",
+      options: {
+        apiKey: "XAPIKEY",
+        serviceId: "ilmale",
+        apis: [
+          {
+            endpoint: "articles",
+          },
+        ],
+      }
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

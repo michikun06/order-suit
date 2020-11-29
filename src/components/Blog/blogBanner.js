@@ -24,11 +24,9 @@ const BlogBanner = ({ img, title, date, to }) => {
                     duration={500}
                 >
                     <div className="content">
-                        <div className="blogBox">
-                            <img src={img} className="img" alt="Blog画像" />
-                            <p className="title">{title}</p>
-                            <p className="date">{date}</p>
-                        </div>
+                        <img src={img} className="img" alt="Blog画像" />
+                        <p className="title">{title}</p>
+                        <p className="date">{date}</p>
                     </div>
                 </PageLink>
             </motion.div>

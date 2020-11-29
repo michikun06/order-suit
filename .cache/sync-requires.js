@@ -10,6 +10,8 @@ exports.components = {
   "component---src-pages-booking-js": hot(preferDefault(require("/Users/ipad/react/order-suit/src/pages/booking.js"))),
   "component---src-pages-index-js": hot(preferDefault(require("/Users/ipad/react/order-suit/src/pages/index.js"))),
   "component---src-pages-order-js": hot(preferDefault(require("/Users/ipad/react/order-suit/src/pages/order.js"))),
-  "component---src-pages-price-js": hot(preferDefault(require("/Users/ipad/react/order-suit/src/pages/price.js")))
+  "component---src-pages-patients-js": hot(preferDefault(require("/Users/ipad/react/order-suit/src/pages/patients.js"))),
+  "component---src-pages-price-js": hot(preferDefault(require("/Users/ipad/react/order-suit/src/pages/price.js"))),
+  "component---src-templates-article-js": hot(preferDefault(require("/Users/ipad/react/order-suit/src/templates/article.js")))
 }
 
