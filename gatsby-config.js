@@ -49,7 +49,7 @@ module.exports = {
     {
       resolve: "gatsby-source-microcms",
       options: {
-        apiKey: XAPIKEY,
+        apiKey: "XAPIKEY",
         serviceId: "ilmale",
         apis: [
           {
