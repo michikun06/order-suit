@@ -27,7 +27,7 @@ module.exports = {
     {
       resolve: "gatsby-source-microcms",
       options: {
-        apiKey: process.env.GATSBY_MICRO_CMS_API_KEY,
+        apiKey: "1646f158-044d-46a0-81d2-68eed7353c2d",
         serviceId: "ilmale",
         apis: [
           {
@@ -65,3 +65,6 @@ module.exports = {
     `gatsby-plugin-sitemap`,
   ],
 }
+
+
+// process.env.GATSBY_MICRO_CMS_API_KEY

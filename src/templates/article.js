@@ -11,20 +11,22 @@ const ArticlePost = props => {
         <Layout>
             <BlogContent>
                 <div className="body">
-                    <h2>{post.title}</h2>
+                    <h2 className="title">{post.title}</h2>
                     <h3
+                        className="title_origin"
                         dangerouslySetInnerHTML={{
                             __html: `${post.title_origin}`,
                         }}
                     ></h3>
                     <br />
-                    <img
+                    {/* <img
                         src={post.pict.url}
                         width={200}
                         height={200}
                         alt="pict画像"
-                    />
+                    /> */}
                     <p
+                        className="contents"
                         dangerouslySetInnerHTML={{
                             __html: `${post.body}`,
                         }}
@@ -59,5 +61,21 @@ const BlogContent = styled.section`
     display: inline-block;
     width:100%;
     vertical-align: top;
-    text-align : center;
+    padding: 30px 30px;
+
+    .title{
+        text-align: center;
+    }
+
+    .title_origin{
+        text-align: center;
+    }
+
+    .contents img{
+        width :100%;
+    }
+
+    @media (min-width: 600px) {
+        padding:50px 200px;
+    }
 `

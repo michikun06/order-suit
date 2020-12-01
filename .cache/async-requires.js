@@ -7,7 +7,6 @@ exports.components = {
   "component---src-pages-booking-js": () => import("./../../../src/pages/booking.js" /* webpackChunkName: "component---src-pages-booking-js" */),
   "component---src-pages-index-js": () => import("./../../../src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */),
   "component---src-pages-order-js": () => import("./../../../src/pages/order.js" /* webpackChunkName: "component---src-pages-order-js" */),
-  "component---src-pages-patients-js": () => import("./../../../src/pages/patients.js" /* webpackChunkName: "component---src-pages-patients-js" */),
   "component---src-pages-price-js": () => import("./../../../src/pages/price.js" /* webpackChunkName: "component---src-pages-price-js" */),
   "component---src-templates-article-js": () => import("./../../../src/templates/article.js" /* webpackChunkName: "component---src-templates-article-js" */)
 }

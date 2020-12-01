@@ -116,6 +116,7 @@ const BlogWrapper = styled.section`
         font-weight: bold;
         margin : 10px;
         color: black;
+        letter-spacing: 0.3px;
     }
 
     .date{
