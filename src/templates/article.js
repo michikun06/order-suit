@@ -18,7 +18,6 @@ const ArticlePost = props => {
                             __html: `${post.title_origin}`,
                         }}
                     ></h3>
-                    <br />
                     <p
                         className="contents"
                         dangerouslySetInnerHTML={{
