@@ -19,12 +19,6 @@ const ArticlePost = props => {
                         }}
                     ></h3>
                     <br />
-                    {/* <img
-                        src={post.pict.url}
-                        width={200}
-                        height={200}
-                        alt="pict画像"
-                    /> */}
                     <p
                         className="contents"
                         dangerouslySetInnerHTML={{
