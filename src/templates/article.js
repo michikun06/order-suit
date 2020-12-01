@@ -18,12 +18,12 @@ const ArticlePost = props => {
                             __html: `${post.title_origin}`,
                         }}
                     ></h3>
-                    <p
+                    <div
                         className="contents"
                         dangerouslySetInnerHTML={{
                             __html: `${post.body}`,
                         }}
-                    ></p>
+                    ></div>
                 </div>
             </BlogContent>
         </Layout>
