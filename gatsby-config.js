@@ -13,7 +13,7 @@ module.exports = {
     description: "鹿児島県鹿児島市の出張訪問をメインにした安いオーダースーツ専門店#IL:MALE",
     author: "Michihiro Kawaji",
     image: "/About背景.png",
-    siteUrl: "https://il-male.netlify.app/",
+    siteUrl: "https://ilmale.info/",
     instagramUsername: "@il_mare1021",
   },
   plugins: [
@@ -39,7 +39,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://il-male.netlify.app/`,
+        siteUrl: `https://ilmale.info/`,
         stripQueryString: true,
       },
     },
@@ -53,8 +53,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://il-male.netlify.app/',
-        sitemap: 'https://il-male.netlify.app/sitemap.xml',
+        host: 'https://ilmale.info/',
+        sitemap: 'https://ilmale.info/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
